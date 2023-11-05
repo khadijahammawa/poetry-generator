@@ -12,7 +12,7 @@ void setup() {
   background(255);
   
   oscP5 = new OscP5(this, 12000);
-  destination = new NetAddress("127.0.0.1", 57120);
+  destination = new NetAddress("127.0.0.1", 12345);
   
   textSize(18);
   textAlign(LEFT);
@@ -30,7 +30,7 @@ void draw() {
 }
 
 void keyPressed() {
-  if (key == '\n') {
+  if (key == ENTER) {
     // When Enter/Return key is pressed, send user input via OSC
     OscMessage msg = new OscMessage("/prompt");
     msg.add(userInput);
