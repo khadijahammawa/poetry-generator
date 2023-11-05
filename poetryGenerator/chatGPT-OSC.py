@@ -19,7 +19,7 @@ server = osc_server.ThreadingOSCUDPServer(("localhost", 12345), dispatcher)
 print("Servidor OSC iniciado en {}".format(server.server_address))
 
 # Definir osc_client para enviar respuestas
-osc_client = udp_client.SimpleUDPClient("127.0.0.1", 12001)  # Assuming Processing is listening on this IP and port
+osc_client = udp_client.SimpleUDPClient("127.0.0.1", 12000)  # Assuming Processing is listening on this IP and port
 
 server.serve_forever()
 
