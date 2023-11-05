@@ -1,5 +1,6 @@
 # poetry-generator
 
+<<<<<<< HEAD
 1) Install all required libraries
 
 ```bash
@@ -12,3 +13,8 @@ python poetryGenerator/chatGPT-OSC.py
 ```
 
 3) Launch `poetryGenerator/poetryGenerator.pde` and send your prompt
+=======
+```bash
+pip install -r requirements
+```
+>>>>>>> be9d1e8 (updated README)
