@@ -8,7 +8,7 @@ from pythonosc import dispatcher, osc_server, udp_client
 def handle_prompt(unused_addr, prompt_text):
     print(prompt_text)
 
-    response_text = generate_rhymed_poem(prompt_text)
+    response_text = generate_poetry(prompt_text)
     osc_client.send_message("/response", response_text)
 
 # Configura OSC
@@ -19,7 +19,7 @@ server = osc_server.ThreadingOSCUDPServer(("localhost", 12345), dispatcher)
 print("Servidor OSC iniciado en {}".format(server.server_address))
 
 # Definir osc_client para enviar respuestas
-osc_client = udp_client.SimpleUDPClient("127.0.0.1", 12000)  # Assuming Processing is listening on this IP and port
+osc_client = udp_client.SimpleUDPClient("127.0.0.1", 12001)  # Assuming Processing is listening on this IP and port
 
 server.serve_forever()
 
