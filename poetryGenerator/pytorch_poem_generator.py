@@ -13,3 +13,5 @@ def generate_poetry(prompt):
     print(generated_text)
 
     return generated_text
+
+#model = TFGPT2LMHeadModel.from_pretrained("striki-ai/william-shakespeare-poetry", from_pt=True)

@@ -22,7 +22,7 @@ void draw() {
   background(255);
 
   fill(0);
-  text("User Input: " + userInput, 20, 50);
+  text("Enter poetry prompt (e.g. Once upon a time): " + userInput, 20, 50);
 
   fill(50, 150, 200);
   text("Generated Poetry:", 20, 100);
@@ -30,7 +30,7 @@ void draw() {
 }
 
 void keyPressed() {
-  if (key == ENTER) {
+  if (key == RETURN) {
     // When Enter/Return key is pressed, send user input via OSC
     OscMessage msg = new OscMessage("/prompt");
     msg.add(userInput);
