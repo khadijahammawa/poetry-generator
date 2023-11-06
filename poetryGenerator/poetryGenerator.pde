@@ -30,7 +30,7 @@ void draw() {
 }
 
 void keyPressed() {
-  if (key == RETURN) {
+  if (key == ENTER) {
     // When Enter/Return key is pressed, send user input via OSC
     OscMessage msg = new OscMessage("/prompt");
     msg.add(userInput);
